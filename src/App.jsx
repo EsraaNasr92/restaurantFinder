@@ -50,7 +50,7 @@ function App() {
             setError("An unknown error occurred.");
         }
       },
-      { enableHighAccuracy: true, timeout: 10000 }
+      { enableHighAccuracy: true, timeout: 20000 , maximumAge: 0}
     );
   };
 
