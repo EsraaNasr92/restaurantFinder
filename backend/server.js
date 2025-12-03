@@ -7,7 +7,12 @@ dotenv.config(); // Load GOOGLE_API_KEY from .env
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+        origin: [
+        "http://localhost:5173", // Vite
+        "https://resturant-finder-ten.vercel.app" // ✅ must include https:// for deployed site
+        ],
+}));
 
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
