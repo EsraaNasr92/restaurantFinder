@@ -12,6 +12,8 @@ app.use(cors({
         "http://localhost:5173", // Vite
         "https://resturant-finder-ten.vercel.app" // ✅ must include https:// for deployed site
         ],
+        methods: ["GET", "POST"],
+        credentials: true
 }));
 
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
@@ -32,9 +34,9 @@ function distance(lat1, lng1, lat2, lng2) {
     return R * c; // distance in meters
 }
 
-// Test route
+// Health check route
 app.get("/", (req, res) => {
-    res.send("Hello world from backend");
+    res.send("Backend is running!");
 });
 
 // Endpoint to get nearby restaurants

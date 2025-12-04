@@ -2,7 +2,7 @@ import axios from "axios";
 const API = axios.create({
     baseURL: import.meta.env.PROD
         ? "https://restaurant-backend.onrender.com"
-        : "http://localhost:5000/",
+        : "http://localhost:5000",
     headers: { "Content-Type": "application/json" },
 });
 export const getRestaurant = async (lat, lng) => {
