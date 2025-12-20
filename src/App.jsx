@@ -21,6 +21,14 @@ function App() {
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
+
+        // Log the coordinates reported by the browser
+        console.log("Browser-reported location:", {
+          latitude: latitude,
+          longitude: longitude,
+          accuracy: position.coords.accuracy, // in meters
+        });
+
         setCenter({ lat: latitude, lng: longitude });
 
         setLoading(true);
