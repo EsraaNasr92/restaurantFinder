@@ -1,7 +1,7 @@
 import axios from "axios";
 const API = axios.create({
     baseURL: import.meta.env.PROD
-        ? "https://restaurant-backend.onrender.com"
+        ? "https://restaurant-finder-pink.vercel.app"
         : "http://localhost:5000",
     headers: { "Content-Type": "application/json" },
 });

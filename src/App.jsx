@@ -59,7 +59,7 @@ function App() {
       <div className="header mb-6">
         <button
           onClick={handleFindLocation}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
         >
           Use My Location
         </button>
